@@ -18,7 +18,7 @@ This is because there is guaranteed to be a factor of n in the range 0-sqrt(n) a
 The next optimization I made was to immediately check if n is a perfect square. 
 I found that the loop would run until exit when n was a perfect square and to avoid this waste of time I could just quickly check before running the loop.  
 Further, I was able to figure a way to exclude even numbers from my algorithm's considerations, reducing iterations and comparisons by half.
-I found that m = 2i + 3, where m will be a potential factor of n and i is it's corresponding index in the generated list. 
+I found that m = 2i + 3, where m will be odd and a potential factor of n and i is it's corresponding index in the generated list. 
 Because we only need to look at odd numbers as potential primes, I reduced the size of the list initialization to the number of odd numbers up to sqrt(n) (this helped with memory efficiency as well).
 '''
 def sieveEratos(n):
